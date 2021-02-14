@@ -1,4 +1,4 @@
-beat-quest-renamer
+beatquest-renamer
 ==================
 
 This simple command-line app converts your PC [BeatSaber](beatsaber) `CustomLevels`
@@ -15,7 +15,7 @@ Example:
 ```
 $ npm run compile && node dist/index.js /awesome/folder/
 
-> beatrenamer@1.0.0 compile
+> beatquest-renamer@1.0.0 compile
 > tsc src/*.ts --outDir dist
 
 Found 1 songs
