@@ -9,3 +9,16 @@ Example:
 
 [beatsaber]: https://www.beatsaber.com/
 [BMBF]: https://bmbf.dev/stable
+
+# Expected result:
+
+```
+$ npm run compile && node dist/index.js /awesome/folder/
+
+> beatrenamer@1.0.0 compile
+> tsc src/*.ts --outDir dist
+
+Found 1 songs
+==================================
+Succesfully converted 1 songs
+```
