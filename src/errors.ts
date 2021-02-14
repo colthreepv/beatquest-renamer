@@ -20,3 +20,17 @@ export const errors = {
   InvalidRedirectLocation: addToFailed('Invalid redirect location provided by BeatSaver', 1002),
   UnexpectedFetchFailure: addToFailed('Unexpected Fetch Failure', 1003)
 }
+
+export const printErrors = (songAmount: number) => {
+  if (failedRequests.length === 0) {
+    console.log(`Succesfully converted ${songAmount} songs`)
+    process.exit(0)
+  }
+
+  const successfulAmount = songAmount - failedRequests.length
+
+  console.log(`Succesfully converted ${successfulAmount} songs`)
+  console.error('Errors received')
+  failedRequests.forEach((err) => console.error(err))
+  process.exit(0)
+}
