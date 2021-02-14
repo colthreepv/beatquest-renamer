@@ -1,6 +1,5 @@
-const got = require('got')
-
-const { readdirSync } = require('fs')
+import { readdirSync } from 'fs'
+import got from 'got'
 
 const dir = readdirSync('/mnt/c/Users/valerio/Desktop/quest2/CustomSongs_PC')
 const songsId = dir.map(folderName => {

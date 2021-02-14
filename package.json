@@ -4,15 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "compile": "tsc src/*.ts --outDir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.5",
     "got": "^11.8.1"
   },
   "devDependencies": {
-    "@types/got": "^9.6.11"
+    "@types/got": "^9.6.11",
+    "typescript": "^4.1.5"
   }
 }
