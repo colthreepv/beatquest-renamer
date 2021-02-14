@@ -1,8 +1,0 @@
-{
-  "deno.enable": true,
-  "deno.unstable": true,
-  "typescript.validate.enable": false,
-  "deno.import_intellisense_origins": {
-    "https://deno.land": true,
-  }
-}
