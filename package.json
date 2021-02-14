@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf dist",
     "compile": "tsc src/*.ts --outDir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,6 +15,14 @@
   },
   "devDependencies": {
     "@types/node-fetch": "^2.5.8",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "eslint": "^7.20.0",
+    "eslint-config-standard-with-typescript": "^20.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
     "typescript": "^4.1.5"
   }
 }
