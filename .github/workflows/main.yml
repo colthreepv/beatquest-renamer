@@ -25,6 +25,7 @@ jobs:
           node-version: '14'
       - run: npm install
       - run: npm run build-linux
+      - run: npm run build-win
 
       - name: Create Release
         id: create_release
@@ -37,7 +38,7 @@ jobs:
           draft: true
           prerelease: false
 
-      - name: Upload Release Asset
+      - name: Upload Linux Binary
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
@@ -47,3 +48,14 @@ jobs:
           asset_path: ./beatquest-renamer
           asset_name: beatquest-renamer-linux
           asset_content_type: application/x-executable
+
+      - name: Upload Windows Binary
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./beatquest-renamer.exe
+          asset_name: beatquest-renamer-win.exe
+          asset_content_type: application/x-dosexec
